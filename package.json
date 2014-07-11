@@ -1,0 +1,22 @@
+{
+  "name": "escape-artist",
+  "version": "0.0.0",
+  "description": "TODO",
+  "main": "index.js",
+  "scripts": {
+    "test": "TODO"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jkymarsh/escape-artist.git"
+  },
+  "keywords": [
+    "TODO"
+  ],
+  "author": "J. Ky Marsh",
+  "license": "TODO",
+  "bugs": {
+    "url": "https://github.com/jkymarsh/escape-artist/issues"
+  },
+  "homepage": "https://github.com/jkymarsh/escape-artist"
+}
