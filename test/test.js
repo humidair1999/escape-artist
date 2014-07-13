@@ -18,6 +18,14 @@ describe('.escape()', function() {
     assert.equal(escapeArtist.escape('#'), '&#35;');
   });
 
+  it('converts $ into &#36;', function() {
+    assert.equal(escapeArtist.escape('$'), '&#36;');
+  });
+
+  it('converts % into &#37;', function() {
+    assert.equal(escapeArtist.escape('%'), '&#37;');
+  });
+
   it('converts " into &quot;', function() {
     assert.equal(escapeArtist.escape('"'), '&quot;');
   });
@@ -50,6 +58,14 @@ describe('.unescape()', function() {
 
   it('converts &#35; into #', function() {
     assert.equal(escapeArtist.unescape('&#35;'), '#');
+  });
+
+  it('converts &#36; into $', function() {
+    assert.equal(escapeArtist.unescape('&#36;'), '$');
+  });
+
+  it('converts &#37; into %', function() {
+    assert.equal(escapeArtist.unescape('&#37;'), '%');
   });
 
   it('converts &quot; into "', function() {
