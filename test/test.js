@@ -6,6 +6,18 @@ describe('.escape()', function() {
     assert.equal(escapeArtist.escape('&'), '&amp;');
   });
 
+  it('converts space into &#32;', function() {
+    assert.equal(escapeArtist.escape(' '), '&#32;');
+  });
+
+  it('converts ! into &#33;', function() {
+    assert.equal(escapeArtist.escape('!'), '&#33;');
+  });
+
+  it('converts # into &#35;', function() {
+    assert.equal(escapeArtist.escape('#'), '&#35;');
+  });
+
   it('converts " into &quot;', function() {
     assert.equal(escapeArtist.escape('"'), '&quot;');
   });
@@ -26,6 +38,18 @@ describe('.escape()', function() {
 describe('.unescape()', function() {
   it('converts &amp; into &', function() {
     assert.equal(escapeArtist.unescape('&amp;'), '&');
+  });
+
+  it('converts &#32; into space', function() {
+    assert.equal(escapeArtist.unescape('&#32;'), ' ');
+  });
+
+  it('converts &#33; into !', function() {
+    assert.equal(escapeArtist.unescape('&#33;'), '!');
+  });
+
+  it('converts &#35; into #', function() {
+    assert.equal(escapeArtist.unescape('&#35;'), '#');
   });
 
   it('converts &quot; into "', function() {
