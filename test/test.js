@@ -2,11 +2,11 @@ var assert = require('assert'),
     escapeArtist = require('../index');
 
 describe('.escape()', function() {
-  it('converts & into &amp;', function() {
-    assert.equal(escapeArtist.escape('&'), '&amp;');
-  });
-
   it('converts space into &#32;', function() {
+    console.log(escapeArtist.escape('this is just & some sort of test'));
+    console.log(escapeArtist.escape('?lol=something&haha=somethingElse'));
+    console.log(escapeArtist.escape('&#;'));
+
     assert.equal(escapeArtist.escape(' '), '&#32;');
   });
 
@@ -34,6 +34,38 @@ describe('.escape()', function() {
     assert.equal(escapeArtist.escape('\''), '&#39;');
   });
 
+  it('converts ( into &#40;', function() {
+    assert.equal(escapeArtist.escape('('), '&#40;');
+  });
+
+  it('converts ) into &#41;', function() {
+    assert.equal(escapeArtist.escape(')'), '&#41;');
+  });
+
+  it('converts * into &#42;', function() {
+    assert.equal(escapeArtist.escape('*'), '&#42;');
+  });
+
+  it('converts + into &#43;', function() {
+    assert.equal(escapeArtist.escape('+'), '&#43;');
+  });
+
+  it('converts , into &#44;', function() {
+    assert.equal(escapeArtist.escape(','), '&#44;');
+  });
+
+  it('converts - into &#45;', function() {
+    assert.equal(escapeArtist.escape('-'), '&#45;');
+  });
+
+  it('converts . into &#46;', function() {
+    assert.equal(escapeArtist.escape('.'), '&#46;');
+  });
+
+  it('converts / into &#47;', function() {
+    assert.equal(escapeArtist.escape('/'), '&#47;');
+  });
+
   it('converts < into &lt;', function() {
     assert.equal(escapeArtist.escape('<'), '&lt;');
   });
@@ -44,10 +76,6 @@ describe('.escape()', function() {
 });
 
 describe('.unescape()', function() {
-  it('converts &amp; into &', function() {
-    assert.equal(escapeArtist.unescape('&amp;'), '&');
-  });
-
   it('converts &#32; into space', function() {
     assert.equal(escapeArtist.unescape('&#32;'), ' ');
   });
@@ -74,6 +102,38 @@ describe('.unescape()', function() {
 
   it('converts &#39; into \'', function() {
     assert.equal(escapeArtist.unescape('&#39;'), '\'');
+  });
+
+  it('converts &#40; into (', function() {
+    assert.equal(escapeArtist.unescape('&#40;'), '(');
+  });
+
+  it('converts &#41; into )', function() {
+    assert.equal(escapeArtist.unescape('&#41;'), ')');
+  });
+
+  it('converts &#42; into *', function() {
+    assert.equal(escapeArtist.unescape('&#42;'), '*');
+  });
+
+  it('converts &#43; into +', function() {
+    assert.equal(escapeArtist.unescape('&#43;'), '+');
+  });
+
+  it('converts &#44; into ,', function() {
+    assert.equal(escapeArtist.unescape('&#44;'), ',');
+  });
+
+  it('converts &#45; into -', function() {
+    assert.equal(escapeArtist.unescape('&#45;'), '-');
+  });
+
+  it('converts &#46; into .', function() {
+    assert.equal(escapeArtist.unescape('&#46;'), '.');
+  });
+
+  it('converts &#47; into /', function() {
+    assert.equal(escapeArtist.unescape('&#47;'), '/');
   });
 
   it('converts &lt; into <', function() {
