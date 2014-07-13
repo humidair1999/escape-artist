@@ -16,6 +16,8 @@ module.exports = {
       .replace(/-/g, '&#45;')
       .replace(/\./g, '&#46;')
       .replace(/\//g, '&#47;')
+      .replace(/=/g, '&#61;')
+      .replace(/\?/g, '&#63;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;');
   },
@@ -36,6 +38,8 @@ module.exports = {
       .replace(/&#45;/g, '-')
       .replace(/&#46;/g, '.')
       .replace(/&#47;/g, '/')
+      .replace(/&#61;/g, '=')
+      .replace(/&#63;/g, '?')
       .replace(/&lt;/g, '<')
       .replace(/&gt;/g, '>');
   }

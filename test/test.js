@@ -66,6 +66,14 @@ describe('.escape()', function() {
     assert.equal(escapeArtist.escape('/'), '&#47;');
   });
 
+  it('converts = into &#61;', function() {
+    assert.equal(escapeArtist.escape('='), '&#61;');
+  });
+
+  it('converts ? into &#63;', function() {
+    assert.equal(escapeArtist.escape('?'), '&#63;');
+  });
+
   it('converts < into &lt;', function() {
     assert.equal(escapeArtist.escape('<'), '&lt;');
   });
@@ -134,6 +142,14 @@ describe('.unescape()', function() {
 
   it('converts &#47; into /', function() {
     assert.equal(escapeArtist.unescape('&#47;'), '/');
+  });
+
+  it('converts &#61; into /', function() {
+    assert.equal(escapeArtist.unescape('&#61;'), '=');
+  });
+
+  it('converts &#63; into ?', function() {
+    assert.equal(escapeArtist.unescape('&#63;'), '?');
   });
 
   it('converts &lt; into <', function() {
