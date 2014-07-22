@@ -3,10 +3,6 @@ var assert = require('assert'),
 
 describe('.escape()', function() {
   it('converts space into &#32;', function() {
-    console.log(escapeArtist.escape('this is just & some sort of test'));
-    console.log(escapeArtist.escape('?lol=something&haha=somethingElse'));
-    console.log(escapeArtist.escape('&#;'));
-
     assert.equal(escapeArtist.escape(' '), '&#32;');
   });
 

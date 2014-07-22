@@ -1,19 +1,23 @@
 {
   "name": "escape-artist",
-  "version": "0.0.0",
-  "description": "TODO",
+  "version": "1.0.0",
+  "author": "J. Ky Marsh",
+  "description": "A simple module for escaping and unescaping common HTML entities in strings.",
   "main": "index.js",
   "scripts": {
-    "test": "TODO"
+    "test": "mocha ./test/test.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jkymarsh/escape-artist.git"
   },
   "keywords": [
-    "TODO"
+    "html",
+    "entities",
+    "escape",
+    "unescape",
+    "ascii"
   ],
-  "author": "J. Ky Marsh",
   "license": "TODO",
   "bugs": {
     "url": "https://github.com/jkymarsh/escape-artist/issues"
