@@ -1,6 +1,6 @@
 {
   "name": "escape-artist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "J. Ky Marsh",
   "description": "A simple module for escaping and unescaping common HTML entities in strings.",
   "private": false,
