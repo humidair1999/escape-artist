@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "author": "J. Ky Marsh",
   "description": "A simple module for escaping and unescaping common HTML entities in strings.",
+  "private": false,
   "main": "index.js",
   "scripts": {
     "test": "mocha ./test/test.js"
@@ -18,7 +19,7 @@
     "unescape",
     "ascii"
   ],
-  "license": "TODO",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jkymarsh/escape-artist/issues"
   },
