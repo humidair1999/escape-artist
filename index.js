@@ -6,6 +6,7 @@ module.exports = {
       .replace(/!/g, '&#33;')
       .replace(/\$/g, '&#36;')
       .replace(/%/g, '&#37;')
+      // TODO: use abbrev or numeric?
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#39;')
       .replace(/\(/g, '&#40;')
@@ -18,7 +19,9 @@ module.exports = {
       .replace(/\//g, '&#47;')
       .replace(/=/g, '&#61;')
       .replace(/\?/g, '&#63;')
+      // TODO: use abbrev or numeric?
       .replace(/</g, '&lt;')
+      // TODO: use abbrev or numeric?
       .replace(/>/g, '&gt;');
   },
   unescape: function(html) {
@@ -28,6 +31,7 @@ module.exports = {
       .replace(/&#33;/g, '!')
       .replace(/&#36;/g, '$')
       .replace(/&#37;/g, '%')
+      // TODO: use abbrev and numeric
       .replace(/&quot;/g, '"')
       .replace(/&#39;/g, '\'')
       .replace(/&#40;/g, '(')
@@ -40,7 +44,9 @@ module.exports = {
       .replace(/&#47;/g, '/')
       .replace(/&#61;/g, '=')
       .replace(/&#63;/g, '?')
+      // TODO: use abbrev and numeric
       .replace(/&lt;/g, '<')
+      // TODO: use abbrev and numeric
       .replace(/&gt;/g, '>');
   }
 };
